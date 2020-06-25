@@ -1,7 +1,7 @@
 <template>
   <li>
     <div class="bookmark__item">
-      <a :href="url" v-if="url">{{url}}</a>
+      <a :href="url" v-if="url" target="_blank">{{url}}</a>
       <code v-else>{{text.replace(/\#[a-zA-Z]+\s/, '')}}</code>
       <pre :class="hashtag.replace('#', '')" v-for="(hashtag, index) in tags" :key="index">{{hashtag}}</pre>
     </div>
