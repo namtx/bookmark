@@ -19,7 +19,7 @@ export default {
   created: async function() {
     const { data: { messages } } = await axios.get("https://telegram-notes-bot.namtx.now.sh/api/get_updates")
 
-    this.bookmarks = messages;
+    this.bookmarks = messages.reverse();
   },
   components: {
     BookmarkItem,
